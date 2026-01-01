@@ -33,9 +33,10 @@ p{
   font-size: 1.8vh;
 color: white;
 font-weight: 400;
-position: relative ;
-left: 42%;
-top:85%;
+     position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
      /* White Splash Transition */

@@ -30,10 +30,11 @@ body {
 }
 
 p{
+  font-size: 1.8vh;
 color: white;
 font-weight: 400;
 position: relative ;
-left: 47%;
+left: 42%;
 top:85%;
 }
 

@@ -11,7 +11,7 @@ body {
 		font-style: normal;
        }
 
-	   .message{
+	   /* .message{
 			font-size: 3.25vh;
 			color:rgb(0, 0, 0);
 			position: absolute;
@@ -25,7 +25,7 @@ body {
 		 .message{
 			font-size: 4vw;
 	   }
-		}
+		}*/
 	   .hint{
 			font-size: 1.8vh;
 			color: rgb(0, 0, 0);
@@ -35,7 +35,39 @@ body {
 			transform: translate(-50%, -50%);
 			z-index: 20;
 			font-weight: 400;
-		}
+		} 
+.message{
+	font-size: clamp(14px, 2.5vh, 24px);
+	color: rgb(0, 0, 0);
+	position: absolute;
+	top: 8%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	z-index: 10;
+	white-space: pre-wrap;
+	width: 85%;
+	max-width: 450px;
+	text-align: center;
+	padding: 15px;
+	box-sizing: border-box;
+	line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+	.message{
+		font-size: clamp(12px, 3.5vw, 18px);
+		top: 5%;
+		width: 80%;
+		padding: 10px;
+		line-height: 1.5;
+	}
+}
+
+@media (min-height: 700px) {
+	.message{
+		top: 12%;
+	}
+}
 
 		.scene {
 		  width: 100%;

@@ -1,3 +1,26 @@
+ const audio = document.getElementById("global-audio");
+
+  // volume optional
+  audio.volume = 0.6;
+
+  // check if user already allowed audio
+  const audioAllowed = localStorage.getItem("audioAllowed");
+
+  if (audioAllowed === "true") {
+    audio.play().catch(() => {});
+  }
+
+  function startAudioOnce() {
+    audio.play().then(() => {
+      localStorage.setItem("audioAllowed", "true");
+    }).catch(() => {});
+
+    document.removeEventListener("click", startAudioOnce);
+  }
+
+  // first user interaction
+  document.addEventListener("click", startAudioOnce);
+  
 const pages = [
   "neon-loader.html",    // Page 0
   "fireworks.html",      // Page 1
@@ -103,3 +126,4 @@ window.addEventListener("popstate", (event) => {
 // Initialize on load - always starts from page 1
 init();
 // ```
+
